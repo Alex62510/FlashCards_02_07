@@ -48,37 +48,39 @@ const createTypographyComponent = <T extends ReactTag>(
 }
 
 export const Typography = {
+  Large: createTypographyComponent('large'),
   H1: createTypographyComponent('h1'),
   H2: createTypographyComponent('h2'),
   H3: createTypographyComponent('h3'),
-  Subtitle1: createTypographyComponent('subtitle1'),
-  Subtitle2: createTypographyComponent('subtitle2'),
-  SubtitleLink: createTypographyComponent('subtitleLink'),
   Body1: createTypographyComponent('body1'),
+  Subtitle1: createTypographyComponent('subtitle1'),
   Body2: createTypographyComponent('body2'),
-  Overline: createTypographyComponent('overline'),
+  Subtitle2: createTypographyComponent('subtitle2'),
   Caption: createTypographyComponent('caption'),
-  CaptionBold: createTypographyComponent('captionBold'),
-  CaptionLink: createTypographyComponent('captionLink'),
+  Overline: createTypographyComponent('overline'),
   Link: createTypographyComponent('link'),
+  CaptionLink: createTypographyComponent('captionLink'),
+  SubtitleLink: createTypographyComponent('subtitleLink'),
+  CaptionBold: createTypographyComponent('captionBold'),
   Error: createTypographyComponent('error'),
 }
 
 const COMPONENTS = {
+  large: 'span',
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
-  subtitle1: 'p',
-  subtitle2: 'p',
-  subtitleLink: 'span',
   body1: 'p',
+  subtitle1: 'p',
   body2: 'p',
-  overline: 'p',
+  subtitle2: 'p',
   caption: 'caption',
-  captionBold: 'caption',
-  captionLink: 'a',
-  error: 'span',
+  overline: 'p',
   link: 'a',
+  captionLink: 'a',
+  subtitleLink: 'span',
+  captionBold: 'caption',
+  error: 'span',
 } as const
 
 type Component = keyof typeof COMPONENTS

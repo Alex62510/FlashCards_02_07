@@ -4,68 +4,59 @@
   font-size: $fontSize;
   font-weight: $fontWeight;
   line-height: $lineHeight;
-  color: var(--color-text-primary);
+  color: var(--color-light-100);
+}
+
+.large {
+  @include typography(var(--font-size-xxl), var(--line-height-l), var(--font-weight-bold));
 }
 
 .h1 {
-  @include typography(var(--font-size-xxl), var(--line-height-xl), var(--font-weight-bold));
+  @include typography(var(--font-size-xl), var(--line-height-l), var(--font-weight-bold));
 }
 
 .h2 {
-  @include typography(var(--font-size-xl), var(--line-height-m), var(--font-weight-semi-bold));
+  @include typography(var(--font-size-l), var(--line-height-m), var(--font-weight-bold));
 }
 
 .h3 {
-  @include typography(var(--font-size-l), var(--line-height-m), var(--font-weight-medium));
-}
-
-.subtitle1 {
-  @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-medium));
-}
-
-.subtitle2 {
-  @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-medium));
+  @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
 }
 
 .body1 {
   @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-regular));
 }
 
+.subtitle1 {
+  @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
+}
+
 .body2 {
   @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
 }
 
-.overline {
-  @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
-
-  text-transform: uppercase;
+.subtitle2 {
+  @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-bold));
 }
 
 .caption {
-  @include typography(var(--font-size-xs), var(--line-height-m), var(--font-weight-regular));
+  @include typography(var(--font-size-xs), var(--line-height-s), var(--font-weight-regular));
 
   display: inline-block;
   text-align: start;
 }
 
-.captionBold {
-  @include typography(var(--font-size-xs), var(--line-height-m), var(--font-weight-bold));
+.overline {
+  @include typography(var(--font-size-xs), var(--line-height-s), var(--font-weight-bold));
 
-  display: inline-block;
-  text-align: start;
-}
-
-.captionLink {
-  @include typography(var(--font-size-xs), var(--line-height-m), var(--font-weight-regular));
-
-  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .link {
   @include typography(inherit, inherit, inherit);
 
   cursor: pointer;
-  color: var(--color-text-link);
+  color: var(--color-info-500);
   text-decoration: underline;
 
   &:hover,
@@ -87,8 +78,21 @@
   }
 }
 
+.captionLink {
+  @include typography(var(--font-size-xs), var(--line-height-m), var(--font-weight-regular));
+
+  text-decoration: underline;
+}
+
+.captionBold {
+  @include typography(var(--font-size-xs), var(--line-height-m), var(--font-weight-bold));
+
+  display: inline-block;
+  text-align: start;
+}
+
 .error {
   @include typography(var(--font-size-sx), var(--line-height-m), var(--font-weight-regular));
 
-  color: var(--color-accent-500);
+  color: var(--color-danger-500);
 }
