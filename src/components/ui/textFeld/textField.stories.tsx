@@ -60,6 +60,32 @@ export const SearchChangeValue = {
     search: true,
   },
 }
+export const VisiableValue = {
+  render: () => {
+    const [showText, setShowText] = useState(true)
+    const [text, setText] = useState('')
+
+    return (
+      <>
+        <TextField
+          placeholder={'Input search'}
+          onDoubleClick={() => {
+            setShowText(!showText)
+          }}
+          search={true}
+          value={showText ? text : '---'}
+          onChange={e => setText(e.currentTarget.value)}
+          onClearClick={() => setText('')}
+        />
+      </>
+    )
+  },
+  args: {
+    label: 'Some label',
+    placeholder: 'Search...',
+    search: true,
+  },
+}
 
 export const Invalid = {
   render: () => {
