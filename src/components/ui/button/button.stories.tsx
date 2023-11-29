@@ -62,7 +62,7 @@ export const Link: Story = {
 
 export const FullWidth: Story = {
   args: {
-    variant: 'primary',
+    ...Primary.args,
     children: 'Full Width Button',
     disabled: false,
     fullWidth: true,

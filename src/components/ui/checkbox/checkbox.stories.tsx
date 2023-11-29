@@ -11,6 +11,7 @@ import { ValuePreview } from '@/utils/preview/preview.tsx'
 export default {
   title: 'Components/Data Entry/Checkbox',
   component: Checkbox,
+  tags: ['autodocs'],
 } as Meta<typeof Checkbox>
 
 export const Default = {

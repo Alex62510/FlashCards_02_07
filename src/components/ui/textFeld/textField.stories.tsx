@@ -9,6 +9,7 @@ import { Eye } from '@/assets/icons/eye.tsx'
 export default {
   title: 'Components/Data Entry/Text Field',
   component: TextField,
+  tags: ['autodocs'],
 } as Meta<typeof TextField>
 
 export const Primary = {
