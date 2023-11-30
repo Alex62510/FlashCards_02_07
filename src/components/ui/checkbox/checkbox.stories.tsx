@@ -20,7 +20,7 @@ export const Default = {
 
     return (
       <VerticalContainer>
-        <Checkbox {...args} checked={checked} onChange={setChecked} />
+        <Checkbox {...args} checked={checked} onValueChange={setChecked} />
         {/*<ValuePreview>checked: {String(checked)}</ValuePreview>*/}
       </VerticalContainer>
     )
@@ -37,7 +37,7 @@ export const DefaultWhithLabel = {
 
     return (
       <VerticalContainer>
-        <Checkbox {...args} checked={checked} onChange={setChecked} />
+        <Checkbox {...args} checked={checked} onValueChange={setChecked} />
         <ValuePreview>checked: {String(checked)}</ValuePreview>
       </VerticalContainer>
     )
