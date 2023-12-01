@@ -31,6 +31,21 @@ export const Default = {
     disabled: false,
   },
 }
+export const Disable = {
+  render: (args: JSX.IntrinsicAttributes & CheckboxProps) => {
+    return (
+      <VerticalContainer>
+        <Checkbox {...args} checked={false} disabled={true} />
+        {/*<ValuePreview>checked: {String(checked)}</ValuePreview>*/}
+      </VerticalContainer>
+    )
+  },
+
+  args: {
+    label: '',
+    disabled: false,
+  },
+}
 export const DefaultWhithLabel = {
   render: (args: JSX.IntrinsicAttributes & CheckboxProps) => {
     const [checked, setChecked] = useState(true)
