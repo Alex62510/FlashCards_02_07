@@ -20,7 +20,22 @@ export const Default = {
 
     return (
       <VerticalContainer>
-        <Checkbox {...args} checked={checked} onChange={setChecked} />
+        <Checkbox {...args} checked={checked} onValueChange={setChecked} />
+        {/*<ValuePreview>checked: {String(checked)}</ValuePreview>*/}
+      </VerticalContainer>
+    )
+  },
+
+  args: {
+    label: '',
+    disabled: false,
+  },
+}
+export const Disable = {
+  render: (args: JSX.IntrinsicAttributes & CheckboxProps) => {
+    return (
+      <VerticalContainer>
+        <Checkbox {...args} checked={false} disabled={true} />
         {/*<ValuePreview>checked: {String(checked)}</ValuePreview>*/}
       </VerticalContainer>
     )
@@ -37,7 +52,7 @@ export const DefaultWhithLabel = {
 
     return (
       <VerticalContainer>
-        <Checkbox {...args} checked={checked} onChange={setChecked} />
+        <Checkbox {...args} checked={checked} onValueChange={setChecked} />
         <ValuePreview>checked: {String(checked)}</ValuePreview>
       </VerticalContainer>
     )
